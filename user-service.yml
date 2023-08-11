@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/test
+    username: root
+    password: '{cipher}AQBLeQhi91TK4j16zOk5W761uhKmd0aOVAmu2a76n2TkS6Sg0aUcflt/qJmJzBDRSc4TzJ5DhkaBfgxmGmjvVigX9eYixVOjGzgXKugEaA5OIwh6hB82o2zygMbMITBKGiU8vecRm92RE1k5lvzSo6IvWV8wztxrX3ybGeHVjuHRlUK5aCr9gRD/EV1G6S3VwRv/3uSKAZT64JERDqr5B41buAEn1XhP3XGau7QQjwc3xje8dx7kom7Ibt582yFh04QyIbbAXRTo13bttjCvCl8J/HDKYgqrlaorNsLToJhdye1THwmff6chnW6CYl5g1sIqLUlDvKNp2FcK3zVytoUgsN60lQc3n2BuWTou5/gAQVNKb92q9Ez54HiCnEbWY3Q='
+
+token:
+  expiration_time: 864000000
+  secret: my_token
+
+gateway:
+  ip: 192.168.0.8
+
+order_service:
+  url: http://order-service/order-service/%s/orders
+  exception:
+    orders_is_empty: There is no item
